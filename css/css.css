@@ -1,0 +1,33 @@
+body {
+    color: #ff00ea;
+    background-color: #91dde3;
+ }
+
+  h1{
+    text-align: center;
+    color: #ff00ea;
+    text-transform: capitalize;
+
+  }
+   h2,h3,h4,h5,h6{
+
+    color: #ff00ea;
+    text-transform: capitalize;
+
+   }
+.hide{
+    display: none;
+}
+
+.things:hover .hide{
+
+    display: block;
+    background-color: #ffffff;
+
+}
+
+
+.img {
+    height:30px;
+    width:30px;
+}
