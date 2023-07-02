@@ -15,16 +15,6 @@ body {
     text-transform: capitalize;
 
    }
-.hide{
-    display: none;
-}
-
-.things:hover .hide{
-
-    display: block;
-    background-color: #ffffff;
-
-}
 
 
 .img {
