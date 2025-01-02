@@ -1,4 +1,4 @@
-<!-- <?php
+<?php
 // // Start the session
 // session_start();
 
@@ -15,10 +15,10 @@
 // }
 $servername = "localhost";
 $username = "nathanael";
-$password = getenv('DB_PASSWORD');
+$password = '!@F@QfLCu_p2Xhk@rgjv';
 
 try {
-  $conn = new PDO("mysql:host=$servername;dbname=myDB", $username, $password);
+  $conn = new PDO("mysql:host=$servername;dbname=homepage", $username, $password);
   // set the PDO error mode to exception
   $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   echo "Connected successfully";
@@ -27,4 +27,4 @@ try {
 }
 
 
-?>  -->
+?>
