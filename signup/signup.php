@@ -16,15 +16,21 @@
 $servername = "localhost";
 $username = "nathanael";
 $password = '!@F@QfLCu_p2Xhk@rgjv';
+$dbname = "homepage";
 
 try {
-  $conn = new PDO("mysql:host=$servername;dbname=homepage", $username, $password);
+  $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
   // set the PDO error mode to exception
   $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-  echo "Connected successfully";
+  $sql = "INSERT INTO `logins` (`isAdmin`, `Username`, `FirstName`)
+  VALUES (0, 'natthopo', 'Natthaphon')";
+  // use exec() because no results are returned
+  $conn->exec($sql);
+  echo "New record created successfully";
 } catch(PDOException $e) {
-  echo "Connection failed: " . $e->getMessage();
-}
+  echo $sql . "<br>" . $e->getMessage();
+} 
 
+$conn = null;
 
 ?>
