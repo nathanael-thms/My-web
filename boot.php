@@ -1,5 +1,5 @@
 <?php
-require_once('../.env.php');
+require_once('./.env.php');
 $DB_CONNECTION = new PDO(
     sprintf(
         "mysql:host=%s;dbname=%s", 
