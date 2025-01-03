@@ -1,5 +1,5 @@
 <?php
-require_once('./.env.php');
+require_once(dirname(__FILE__) . '/.env.php');
 $DB_CONNECTION = new PDO(
     sprintf( 
         MYSQL_SERVERNAME,
