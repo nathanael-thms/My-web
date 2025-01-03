@@ -18,12 +18,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
   try {
     $sql = $DB_CONNECTION->prepare(
-      "INSERT INTO `logins` (`Username`, `FirstName`)
-      VALUES (:username, :firstname)");
+      "INSERT INTO `logins` (:username, :firstname, :lastname, :email, :phoneNumber)
+      VALUES (:username, :firstname, :lastname, :email, :phoneNumber)");
 
     $sql->exec([
       ':username' => $username,
       ':firstname' => $firstname,
+      ':lastname' => $lastname,
+      ':email' => $email,
+      ':phoneNumber' => $phoneNumber
     ]);
     
     echo "Account created successfully";
