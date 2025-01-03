@@ -2,6 +2,7 @@
 require_once(dirname(__FILE__) . '/.env.php');
 $DB_CONNECTION = new PDO(
     sprintf( 
+        'mysql:host=%s;dbname=%s',
         MYSQL_SERVERNAME,
         MYSQL_DBNAME
     ),
