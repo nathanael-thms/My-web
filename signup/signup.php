@@ -18,10 +18,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
   try {
     $sql = $DB_CONNECTION->prepare(
-      "INSERT INTO `logins` (:username, :firstname, :lastname, :email, :phoneNumber)
-      VALUES (:username, :firstname, :lastname, :email, :phoneNumber)");
+      "INSERT INTO `logins` (Username, FirstName, LastName, Email, PhoneNumber)
+          VALUES (:username, :firstname, :lastname, :email, :phoneNumber)"
+      );
 
-    $sql->exec([
+    $sql->execute([
       ':username' => $username,
       ':firstname' => $firstname,
       ':lastname' => $lastname,
