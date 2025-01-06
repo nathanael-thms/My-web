@@ -6,11 +6,11 @@ session_start();
 // Check if the form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Collect and sanitize input data
-    $username = htmlspecialchars($_POST['username']);
-    $firstname = htmlspecialchars($_POST['firstname']);
-    $lastname = htmlspecialchars($_POST['lastname']);
-    $email = htmlspecialchars($_POST['email']);
-    $phoneNumber = htmlspecialchars($_POST['phoneNumber']);
+    $username = test_input($_POST['username']);
+    $firstname = test_input($_POST['firstname']);
+    $lastname = test_input($_POST['lastname']);
+    $email = test_input($_POST['email']);
+    $phoneNumber = test_input($_POST['phoneNumber']);
 
 }
 
