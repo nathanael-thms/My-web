@@ -1,3 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+</head>
+<body>
+    <h1>Sign Up</h1>
+    <form method="post">
+        <label for="username">Username</label>
+        <input type="text" name="username" id="username" required>
+        <br><br>
+        <label for="firstname">First Name</label>
+        <input type="text" name="firstname" id="firstname" required>
+        <br><br>
+        <label for="lastname">Last Name</label>
+        <input type="text" name="lastname" id="lastname">
+        <br><br>
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email">
+        <br><br>
+        <label for="phoneNumber">Phone Number</label>
+        <input type="tel" name="phoneNumber" id="phoneNumber">
+        <br><br>
+        <button type="submit">Sign Up</button>
+    </form>
 <?php
 require_once('../boot.php');
 // Start the session
@@ -46,3 +73,6 @@ exit();
 
 
 ?>
+
+</body>
+</html>
